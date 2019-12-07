@@ -1,0 +1,588 @@
+@import 'reset';
+@import 'media';
+@import 'header';
+@import 'fonts';
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+
+html{
+   // background-image:url('img/wood4.webp');
+    background-size: contain;
+}
+
+
+body.home{
+    font-family: $text;
+    color:#3d2a5c;
+
+    
+    //DEFAULT SETTINGS
+    .content-block{
+        width:100%;
+        height: 50vh;
+        display: flex;
+        
+        .color-block{
+            width:50%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            background-image: url("img/introabstract.jpg");
+            opacity: .9;
+            background-color:#bca5cf;
+            background-size: cover;
+            @media#{$XLdesktop}{
+                top:5%;
+            }
+        }
+
+        .text-block{
+            width:50%;
+        }
+        .srv-title{
+            font-family: $title;
+        }
+        .srv-desc{
+            line-height: 2em;
+            font-size: 1.1em;
+        }
+
+        button.bookNow{
+            width: 80%;
+            height: 10%;
+            align-self: center;
+            background-color:#3d2a5c;
+            color:#fef6df;
+            font-size: 1em;
+            font-family: $title;
+             letter-spacing: .15em;
+        }
+    }
+
+    //SECTIONS 
+    
+   
+    .hero {
+        height: 100vh;
+        .color-block{
+            background-color:#bca5cf;
+            background-image: url("img/introabstract.jpg;");
+            background-size: cover;
+            opacity: 1;
+            position: relative;
+            top:0;
+        }
+
+        .text-block{
+            display: flex;
+            justify-content: flex-end;
+            background-color:#e3d3ef;
+            .headshot{
+                width:50%;
+                position: absolute;
+                left:0;
+                top:30%;
+                overflow: hidden;
+                border: 5px solid #bca5cf;
+                border-radius: 50%;
+                img{
+                    width:125%;
+                }
+                @media#{$tablet}{
+                    top:15%;
+                    width:35%;
+                    left:25%;
+                }
+            }
+            .about{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width:95%;
+                height: 80%;
+                margin: auto 0;
+                padding:5%;
+              
+                .srv-desc{
+                    width: 90%;
+                    height: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    text-align: center;
+                    @media#{$tablet}{
+                     width:60%;
+                     left:20%;
+                    }
+
+                    .srv-title{
+                        width: 100%;
+                    
+                        h1{
+                            font-size: 1em;
+                            @media#{$tablet}{
+                                font-size: 2em;
+                            }
+                        }
+
+                        h2{
+                            font-size: .9em;
+                            font-style: italic;
+                            @media#{$tablet}{
+                                font-size: 1.5em;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .flourish{
+        height: 25vh;
+        //position: relative;
+        background-color:#2f2548;
+        background-image: url("img/purple.webp");
+        background-size: cover;
+        .srv-desc{
+          width: 80%;
+          min-width: 65%;
+          margin:0 auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          text-align: center;
+
+          .srv-title{
+                font-size: 1.35em;
+                @media#{$tablet}{
+                    font-size: 2.3em;
+                }
+            
+            }
+          .srv-txt{
+              font-size: 1.1em;
+              line-height: 1.1em;
+           }
+            .srv-bttn{
+                width:40%;
+                height: 25%;
+            }
+           @media#{$desktop}{
+               min-width: 49%;
+               max-width: 50%;
+
+               .srv-txt{
+                 font-size: 1.2em;
+                 line-height: 1.5em;
+               }
+            }
+
+           
+        }
+    }
+
+    .fl2{
+        margin-top:5%;
+    }
+
+    .services{
+        position: relative;
+        height: auto;
+        .text-block{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+            // @media#{$tablet}{
+            //     flex-direction: row;
+            // }
+            .service-icons{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width:100%;
+                height: 100%;
+                margin: 1% auto;
+                @media#{$tablet}{
+                    flex-direction: row;
+                    justify-content: space-around;
+                }
+               
+                .service{
+                    width:300px;
+                    height: 500px;
+                    margin: 1% auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-content: center;
+                    text-align: center;
+                    background-color:#fef6df;
+                    border: 3px solid #381766;
+                    @media#{$XLdesktop}{
+                        background-color:inherit;
+                        border:inherit;
+                    }
+                    
+                    .srv-img{
+                        width: 65%;
+                        height: 50%;
+                        margin: 0 auto;
+                        align-content: center;
+                        display: flex;
+                        flex-wrap: wrap;
+                        img{
+                            width:100%;
+                        }
+                    }
+
+                    .srv-title{
+                        width: 100%;
+                        height: 5%;
+                        font-size: 1.3em;
+                    }
+                    .srv-desc{
+                        width: 100%;
+                        height: 40%;
+                        //background-color: #a04c98;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        p{
+                            font-size: .9em;
+                            line-height: 1.1em;
+                            width:95%;
+                            margin:0 auto;
+                        }
+                        .bookNow{
+                            margin:0 auto;
+                            height: 25%;
+                        }
+                    }
+
+                    @media#{$XLdesktop}{
+                        &:nth-of-type(1){
+                            transform: translateY(-100px);
+                        }
+
+                        &:nth-of-type(3){
+                            transform: translateY(100px);
+                        }
+
+                        &:nth-of-type(4){
+                            transform: translateY(-100px);
+                        }
+
+                        &:nth-of-type(6){
+                            transform: translateY(100px);
+                        }
+                    }
+
+
+                }
+                .flip-container{
+                    height: auto;
+
+                } 
+                .flipper{
+                    height: 500px;
+                }
+                .back {
+                    height: 100%;
+                    background-color:#fef6df;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-evenly;
+                }
+
+                @media#{$XLdesktop}{
+
+                    /* entire container, keeps perspective */
+                    .flip-container {
+                        perspective: 1000px;
+                    }
+                    /* flip the pane when hovered */
+                    .flip-container:hover .flipper, .flip-container.hover .flipper {
+                    transform: rotateY(180deg);
+                    }
+
+                    .flip-container, .front, .back {
+                        width: 320px;
+                        height: 480px;
+                    }
+
+                    /* flip speed goes here */
+                    .flipper {
+                        transition: 0.6s;
+                        transform-style: preserve-3d;
+
+                        position: relative;
+                    }
+
+                    /* hide back of pane during swap */
+                    .front, .back {
+                        backface-visibility: hidden;
+
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    /* front pane, placed above back */
+                    .front {
+                        z-index: 2;
+                        /* for firefox 31 */
+                        transform: rotateY(0deg); //set to 0deg for front-facing
+                        background-image: url("img/gears3.jpg");
+                        // background-image: url("img/abstract9.png");
+                        border: 3px solid #a04c98;
+                    }
+
+                    /* back, initially hidden pane */
+                    .back {
+                        transform: rotateY(180deg); //set to 180deg 
+                        border: 3px solid #381766;
+
+                    }
+          
+                }
+            }
+        }
+
+        .color-block{
+            right:0;
+        }
+    }
+  
+    .chakras{
+        position: relative;
+        height: auto;
+        flex-direction: row;
+        height: 75vh;
+        background-image: url("img/purple.webp");
+        background-size: cover;
+        
+
+        .color-block{
+            width: 49.9%;
+            left:0;
+            top:0;
+        }
+
+        .text-block{
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            position: relative;
+            z-index: 99;
+            width: 100%;
+            height: 100%;
+            background-image: url("img/chakras.png");
+            background-size: 40%;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            @media#{$XLdesktop}{
+                
+                background-size: 25%;
+            }
+
+            .chakra-container{
+                width: 45%;
+                height: 80%;
+                padding-top:3%;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                //background-color: lightgrey;
+                @media#{$tablet}{
+                 height: 70%;
+                 width: 735px;
+                }
+
+               
+
+                .chakra-ball{
+                    width:75px;
+                    height: 75px;
+                    border: 2px solid black;
+                    border-radius: 50%;
+                    background-color: lightcoral;
+
+                    @media#{$tablet}{
+                        width:120px;
+                        height: 120px;
+                        background-color: lightgreen;
+
+                    }
+
+                    @media#{$desktop}{
+                       width:120px;
+                       height: 120px;
+                        background-color: lightblue;
+
+                    }
+
+                    @media#{$XLdesktop}{
+                       width:125px;
+                       height: 125px;
+                         background-color: lightcoral;
+
+                    }
+                }
+            }
+
+            .srv-desc{
+                position: absolute;
+                bottom: 42%;
+                width: 95%;
+                text-align: center;
+                background-color:#fef6df;
+                border: 3px solid #381766;
+                height: 45%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+
+                .srv-title{
+                    font-size:1.5em;
+                }
+
+                .srv-txt{
+                    width: 90%;
+                }
+
+                .srv-bttn{
+                    width: 50%;
+                    height: 20%;
+                }
+                @media#{$tablet}{
+                    bottom: 37%;
+                    width: 45%;
+                }
+
+                @media#{$desktop}{
+                   width: 35%;
+                }
+
+                @media#{$XLdesktop}{
+                   width: 30%;
+                   height: 40%;
+                    bottom: 5%;
+                    right: 5%;
+                }
+            }
+        }
+    }
+
+    .testimonials{
+        position: relative;
+        height: 75vh;
+        
+        .color-block{
+            width:100%;
+            height: 100%;
+            background-image: url("img/gears3.jpg");
+            background-size: contain;
+            opacity: 1;
+            @media#{$tablet}{
+                height: 69%;
+                top:15%;
+            }
+        }
+
+        .text-block{
+            position: relative;
+            z-index: 99;
+            width:100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            @media#{$tablet}{
+                flex-direction: row;
+            }
+            .review{
+                width:85%;
+                height: 40%;
+                background-color:#fef6df;
+                border: 3px solid #381766;
+                padding:1%;
+                margin: 2% auto;
+                text-align: center;
+                @media#{$tablet}{
+                    width:30%;
+                }
+                @media#{$XLdesktop}{
+                    &:nth-of-type(1){
+                        transform: translateY(-150px);
+                    }
+
+                    &:nth-of-type(3){
+                        transform: translateY(150px);
+                    }
+
+                }
+
+                .srv-desc{
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-direction: column;
+
+                    .rvw-bttn{
+                        width: 60%;
+                        height: 20%;
+                    }
+                }
+            }
+        }
+    }
+
+    footer{
+        height: 25vh;
+        background-color:#bca5cf;
+        background-image: url("img/purple.webp;");
+        background-size: cover;
+
+        .border{
+            position: relative;
+            top:70%;
+            height: 7vh;
+            background-image: url("img/introabstract.jpg;");
+            background-size: cover;
+        }
+    }
+}
+
+
+
+.color-box{
+    width:100px;
+    height: 100px;
+    border: 2px solid black;
+}
