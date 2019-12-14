@@ -169,6 +169,17 @@ body.home{
           justify-content: space-around;
           text-align: center;
 
+            @media#{$desktop}{
+               min-width: 49%;
+               max-width: 60%;
+
+               .srv-txt{
+                 font-size: 1.2em;
+                 line-height: 1.5em;
+               }
+            }
+  
+
           .srv-title{
                 font-size: 1.35em;
                 @media#{$tablet}{
@@ -181,19 +192,14 @@ body.home{
               line-height: 1.1em;
            }
             .srv-bttn{
-                width:40%;
+                width:50%;
                 height: 25%;
-            }
-           @media#{$desktop}{
-               min-width: 49%;
-               max-width: 50%;
 
-               .srv-txt{
-                 font-size: 1.2em;
-                 line-height: 1.5em;
-               }
+                @media#{$tablet}{
+                    width: 40%;
+                }
             }
-
+         
            
         }
     }
@@ -380,7 +386,7 @@ body.home{
         height: auto;
         flex-direction: row;
         height: 75vh;
-        background-image: url("img/purple.webp");
+        background-image: url("img/introabstract.jpg");
         background-size: cover;
         
 
@@ -388,51 +394,48 @@ body.home{
             width: 49.9%;
             left:0;
             top:0;
-        }
-
-        .text-block{
-            display: flex;
-            justify-content: center;
-            align-items: top;
             position: relative;
-            z-index: 99;
-            width: 100%;
-            height: 100%;
             background-image: url("img/chakras.png");
-            background-size: 40%;
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: bottom;
 
             @media#{$XLdesktop}{
-                
-                background-size: 25%;
+                background-size: 40%;
             }
 
             .chakra-container{
-                width: 45%;
-                height: 80%;
+                width: 50%;
+                height: 100%;
+                margin: 0 auto;
                 padding-top:3%;
                 display: flex;
                 justify-content: space-around;
                 flex-wrap: wrap;
                 //background-color: lightgrey;
                 @media#{$tablet}{
-                 height: 70%;
-                 width: 735px;
+                 height: 100%;
+                 width: 100%;
                 }
 
+                @media#{$XLdesktop}{
+                   width: 80%;
+                   height: 70%;
+                }
                
-
                 .chakra-ball{
                     width:75px;
                     height: 75px;
                     border: 2px solid black;
                     border-radius: 50%;
                     background-color: lightcoral;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
 
                     @media#{$tablet}{
-                        width:120px;
-                        height: 120px;
+                        width:100px;
+                        height: 100px;
                         background-color: lightgreen;
 
                     }
@@ -452,20 +455,36 @@ body.home{
                     }
                 }
             }
+        }
 
+        .text-block{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+            width: 50%;
+            height: 100%;
+           
             .srv-desc{
-                position: absolute;
-                bottom: 42%;
                 width: 95%;
-                text-align: center;
-                background-color:#fef6df;
-                border: 3px solid #381766;
-                height: 45%;
+                height: 99%;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+                text-align: center;
+                background-color:#fef6df;
+                border: 3px solid #381766;
+                
+                @media#{$tablet}{
+                    height: 60%;
+                }
 
+                @media#{$XLdesktop}{
+                   width: 50%;
+                   height: 50%;
+                }
 
                 .srv-title{
                     font-size:1.5em;
@@ -476,24 +495,14 @@ body.home{
                 }
 
                 .srv-bttn{
-                    width: 50%;
-                    height: 20%;
-                }
-                @media#{$tablet}{
-                    bottom: 37%;
-                    width: 45%;
-                }
+                    width: 90%;
+                    height: 10%;
 
-                @media#{$desktop}{
-                   width: 35%;
+                    @media#{$tablet}{
+                        height: 15%;
+                    }
                 }
-
-                @media#{$XLdesktop}{
-                   width: 30%;
-                   height: 40%;
-                    bottom: 5%;
-                    right: 5%;
-                }
+            
             }
         }
     }
@@ -501,6 +510,7 @@ body.home{
     .testimonials{
         position: relative;
         height: 75vh;
+        margin: 3% auto;
         
         .color-block{
             width:100%;
@@ -528,7 +538,7 @@ body.home{
             }
             .review{
                 width:85%;
-                height: 40%;
+                height: 50%;
                 background-color:#fef6df;
                 border: 3px solid #381766;
                 padding:1%;
@@ -555,8 +565,11 @@ body.home{
                     flex-direction: column;
 
                     .rvw-bttn{
-                        width: 60%;
-                        height: 20%;
+                        width: 80%;
+                        height: 30%;
+                        @media#{$tablet}{
+                            height:20%;
+                        }
                     }
                 }
             }

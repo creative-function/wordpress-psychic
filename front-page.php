@@ -19,9 +19,9 @@
                 
 
                 <div class="srv-title">
-                    <h2>I am Madame Arabi <br>and I am ready.</h2>
+                    <h1>I am Madame Arabi <br>and I am ready.</h1>
                     <br>
-                    <h1>Are You?</h1>  
+                    <h2>Are You?</h2>  
                 </div>
                 <button class="bookNow"> Reveal Your Fortune</button>
             </div>
@@ -205,13 +205,8 @@
 </section>
 
 <section class="content-block chakras">
-
-
   <div class="color-block">
-      <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/chakras.png"> -->
-  </div>
-   <div class="text-block"> 
-       <div class="chakra-container">
+      <div class="chakra-container">
             <div class="chakra-ball">
              <h4>Chakra</h4>
             </div>
@@ -240,7 +235,8 @@
              <h4>Chakra</h4>
             </div>
         </div>
-
+  </div>
+   <div class="text-block"> 
         <div class="srv-desc">
             <div class="srv-title">
                 <h2>Special Price</h2> 
@@ -248,12 +244,10 @@
             <p class="srv-txt"> Unlock your first chakra and learn ways to maintain balance within. Enter the New Year of 2020 with vision and focus. Together we can open your third eye and reveal your inner truths... </p> 
 
             <button class="bookNow srv-bttn"> Book Now</button>
-        </div>
-       
+        </div> 
    </div>
+  
 </section>
-
-
 
 <section class="content-block flourish">
     
@@ -302,11 +296,6 @@
             </div>
         </div>
 </section>
-
-
-
-
-
 
 
 
